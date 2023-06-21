@@ -1,7 +1,8 @@
-.profile__add-button {
-  width: 150px;
-  height: 50px;
+.title__edit-button {
+  width: 24px;
+  height: 24px;
   background-color: #000;
+  margin-left: 18px;
   border: 1px solid #fff;
   display: flex;
   align-items: center;
@@ -9,13 +10,12 @@
   transition: 0.2s;
 }
 
-.profile__add-button:hover {
+.title__edit-button:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 930px) {
-  .profile__add-button {
-    width: 282px;
-    margin-top: 36px;
+  .title__edit-button {
+    margin-left: 10px;
   }
 }

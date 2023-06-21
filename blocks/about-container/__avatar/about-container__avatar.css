@@ -1,0 +1,11 @@
+.about-container__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+}
+
+@media screen and (max-width: 930px) {
+  .about-container__avatar {
+    margin-top: 42px;
+  }
+}

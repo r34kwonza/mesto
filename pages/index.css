@@ -20,11 +20,18 @@
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/header.css);
 
-@import url(../blocks/profile-info/__about/profile-info__about.css);
-@import url(../blocks/profile-info/__profile-name/profile-info__profile-name.css);
+@import url(../blocks/about-container/__avatar/about-container__avatar.css);
+@import url(../blocks/about-container/__profile-info/about-container__profile-info.css);
+@import url(../blocks/about-container/about-container.css);
+
+@import url(../blocks/profile-info/__description/profile-info__description.css);
+@import url(../blocks/profile-info/__title/profile-info__title.css);
 @import url(../blocks/profile-info/profile-info.css);
 
 @import url(../blocks/profile/__add-button/profile__add-button.css);
-@import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__profile-info/profile__profile-info.css);
+@import url(../blocks/profile/__area/profile__area.css);
 @import url(../blocks/profile/profile.css);
+
+@import url(../blocks/title/__edit-button/title__edit-button.css);
+@import url(../blocks/title/__name/title__name.css);
+@import url(../blocks/title/title.css);

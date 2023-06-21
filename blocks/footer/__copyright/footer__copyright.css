@@ -3,3 +3,9 @@
   line-height: auto;
   color: #545454;
 }
+
+@media screen and (max-width: 930px) {
+  .footer__copyright {
+    font-size: 14px;
+  }
+}
