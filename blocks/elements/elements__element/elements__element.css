@@ -5,5 +5,5 @@
   border-radius: 12px 12px 10px 10px; /* если везде старвлю 10, то сверху остаются белые "зазоры" */
   display: grid;
   grid-template-rows: 282px auto;
-  grid-template-columns: auto auto
+  grid-template-columns: auto auto;
 }
