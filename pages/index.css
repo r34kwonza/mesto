@@ -35,3 +35,13 @@
 @import url(../blocks/title/__edit-button/title__edit-button.css);
 @import url(../blocks/title/__name/title__name.css);
 @import url(../blocks/title/title.css);
+
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/popup.css);
+
+@import url(../blocks/form/__close-btn/form__close-btn.css);
+@import url(../blocks/form/__description/forn__description.css);
+@import url(../blocks/form/__name/form__name.css);
+@import url(../blocks/form/__save-btn/form__save-btn.css);
+@import url(../blocks/form/__title/form__title.css);
+@import url(../blocks/form/__close-icon/form__close-icon.css);

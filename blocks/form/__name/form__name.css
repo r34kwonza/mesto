@@ -1,0 +1,14 @@
+.form__name {
+  width: 358px;
+  border: 0px;
+  border-bottom: 1px solid #000;
+  opacity: 0.2;
+  margin-top: 54px;
+}
+
+@media screen and (max-width: 930px) {
+  .form__name {
+    margin-top: 75px;
+    width: 238px;
+  }
+}

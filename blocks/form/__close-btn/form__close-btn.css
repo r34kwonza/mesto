@@ -1,0 +1,19 @@
+.form__close-btn {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background-color: transparent;
+  border: 0;
+}
+
+.form__close-btn:hover {
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 930px) {
+  .form__close-btn {
+    top: -36px;
+    right: 0;
+  }
+}
