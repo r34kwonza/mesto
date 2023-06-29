@@ -6,4 +6,9 @@
   align-self: center;
   justify-self: self-end;
   margin-right: 21px;
+  transition: 0.5s;
+}
+
+.element__like:hover {
+  opacity: 0.5;
 }

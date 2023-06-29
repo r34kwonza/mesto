@@ -4,11 +4,11 @@
   right: -40px;
   background-color: transparent;
   border: 0;
+  transition: 0.2s;
 }
 
 .form__close-btn:hover {
   opacity: 0.6;
-  transition: 0.2s;
 }
 
 @media screen and (max-width: 930px) {
