@@ -13,10 +13,10 @@
 @media screen and (max-width: 930px) {
   .profile__description {
     font-size: 14px;
-    font-weight: 400;
     line-height: normal;
     margin-top: 14px;
     grid-column: span 2;
     text-align: center;
+    max-width: calc(100vw - 2 * 50px);
   }
 }
