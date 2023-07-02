@@ -15,53 +15,49 @@
 
   <main class="content">
     <section class="profile" aria-label="profile-area">
-      <div class="profile__area about-container">
-        <img src="images/profile__avatar.png" alt="фото-профиля">
-        <div class="about-container__profile-info profile-info">
-          <div class="profile-info__title title">
-            <p class="title__name">Жак-Ив Кусто</p>
-            <button class="title__edit-button">
-              <img src="images/profile-info__edit-button.svg" alt="">
-            </button>
-          </div>
-          <p class="profile-info__description">Исследователь океанов</p>
+      <img src="images/profile__avatar.png" class="profile__avatar" alt="фото-профиля">
+        <div class="profile__info">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button tpye="button" class="profile__edit-button"></button>
+          <p class="profile__description">Исследователь океана</p>
         </div>
-      </div>
-      <button class="profile__add-button">
-        <img src="images/profile__add-button.svg" alt="">
-      </button>
+      <button type="button" class="profile__add-button"></button>
     </section>
+
+
     <section class="elements" aria-label="elements-area">
-      <div class="elements__element element">
-        <img src="images/element_moskva.png" alt="фото-москва" class="element__photo">
-        <p class="element__title">Москва</p>
-        <img src="images/element__like.svg" alt="кнопка-нравится" class="element__like">
-      </div>
-      <div class="elements__element element">
-        <img src="images/element__kuzneck.png" alt="фото-кузнецк" class="element__photo">
-        <p class="element__title">Кузнецк</p>
-        <img src="images/element__like.svg" alt="кнопка-нравится" class="element__like">
-      </div>
-      <div class="elements__element element">
-        <img src="images/element__penza.png" alt="фото-пенза" class="element__photo">
-        <p class="element__title">Пенза</p>
-        <img src="images/element__like.svg" alt="кнопка-нравится" class="element__like">
-      </div>
-      <div class="elements__element element">
-        <img src="images/element__innopolis.png" alt="фото-иннополис" class="element__photo">
-        <p class="element__title">Иннополис</p>
-        <img src="images/element__like.svg" alt="кнопка-нравится" class="element__like">
-      </div>
-      <div class="elements__element element">
-        <img src="images/element__sochi.png" alt="фото-сочи" class="element__photo">
-        <p class="element__title">Сочи</p>
-        <img src="images/element__like.svg" alt="кнопка-нравится" class="element__like">
-      </div>
-      <div class="elements__element element">
-        <img src="images/element__kaliningrad.png" alt="фото-калининград" class="element__photo">
-        <p class="element__title">Калининград</p>
-        <img src="images/element__like.svg" alt="кнопка-нравится" class="element__like">
-      </div>
+      <ul class="elements__list">
+        <li class="elements__element element">
+          <img src="images/element_moskva.png" alt="фото-москва" class="element__photo">
+          <h2 class="element__title">Москва</h2>
+          <button type="button" class="element__like"></button>
+        </li>
+        <li class="elements__element element">
+          <img src="images/element__kuzneck.png" alt="фото-кузнецк" class="element__photo">
+          <h2 class="element__title">Кузнецк</h2>
+          <button type="button" class="element__like"></button>
+        </li>
+        <li class="elements__element element">
+          <img src="images/element__penza.png" alt="фото-пенза" class="element__photo">
+          <h2 class="element__title">Пенза</h2>
+          <button type="button" class="element__like"></button>
+        </li>
+        <li class="elements__element element">
+          <img src="images/element__innopolis.png" alt="фото-иннополис" class="element__photo">
+          <h2 class="element__title">Иннополис</h2>
+          <button type="button" class="element__like"></button>
+        </li>
+        <li class="elements__element element">
+          <img src="images/element__sochi.png" alt="фото-сочи" class="element__photo">
+          <h2 class="element__title">Сочи</h2>
+          <button type="button" class="element__like"></button>
+        </li>
+        <li class="elements__element element">
+          <img src="images/element__kaliningrad.png" alt="фото-калининград" class="element__photo">
+          <h2 class="element__title">Калининград</h2>
+          <button type="button" class="element__like"></button>
+        </li>
+      </ul>
     </section>
   </main>
 

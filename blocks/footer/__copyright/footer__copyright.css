@@ -2,6 +2,7 @@
   font-size: 18px;
   line-height: auto;
   color: #545454;
+  margin: 0;
 }
 
 @media screen and (max-width: 930px) {

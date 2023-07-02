@@ -7,8 +7,15 @@
   justify-self: self-end;
   margin-right: 21px;
   transition: 0.5s;
+  border: 0;
+  background-color: #fff;
+  background-image: url(../../../images/element__like.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
 }
 
 .element__like:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
