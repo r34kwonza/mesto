@@ -1,5 +1,8 @@
-.form__close-btn {
+.popup__close-btn {
+  background-image: url(../../../images/form__close-icon.svg);
   position: absolute;
+  width: 32px;
+  height: 32px;
   top: -40px;
   right: -40px;
   background-color: transparent;
@@ -7,12 +10,12 @@
   transition: 0.2s;
 }
 
-.form__close-btn:hover {
+.popup__close-btn:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 930px) {
-  .form__close-btn {
+  .popup__close-btn {
     top: -36px;
     right: 0;
   }

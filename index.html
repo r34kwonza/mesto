@@ -16,15 +16,13 @@
   <main class="content">
     <section class="profile" aria-label="profile-area">
       <img src="images/profile__avatar.png" class="profile__avatar" alt="фото-профиля">
-        <div class="profile__info">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button tpye="button" class="profile__edit-button"></button>
-          <p class="profile__description">Исследователь океана</p>
-        </div>
+      <div class="profile__info">
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <button tpye="button" class="profile__edit-button"></button>
+        <p class="profile__description">Исследователь океана</p>
+      </div>
       <button type="button" class="profile__add-button"></button>
     </section>
-
-
     <section class="elements" aria-label="elements-area">
       <ul class="elements__list">
         <li class="elements__element element">
@@ -65,17 +63,17 @@
     <p class="footer__copyright">© 2023 Mesto Russia</p>
   </footer>
 
-  <section class="popup" aria-label="popup">
-    <form class="popup__container form">
-      <p class="form__title">Редактировать профиль</p>
-      <input type="text" class="form__name">
-      <input type="text" class="form__description">
-      <button class="form__save-btn" type="submit">Сохранить</button>
-      <button class="form__close-btn" type="button">
-        <img src="images/form__close-icon.svg" alt="кнопка-закрыть" class="form__close-icon">
-      </button>
-    </form>
-  </section>
+  <div class="popup" aria-label="popup">
+    <div class="popup__container">
+      <form class="popup__form" name="profile-edit">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <input type="text" class="popup__input" name="name-field">
+        <input type="text" class="popup__input" name="description-field">
+        <button class="popup__save-btn" type="submit">Сохранить</button>
+        <button class="popup__close-btn" type="button"></button>
+      </form>
+    </div>
+  </div>
 
   <script src="script/script.js"></script>
 </body>
