@@ -1,6 +1,5 @@
 .elements__element {
   width: 282px;
-  min-height: 361px;
   border-radius: 12px 12px 10px 10px; /* если везде ставлю 10, то сверху остаются белые "зазоры" */
   display: grid;
   grid-template-rows: 282px auto;
