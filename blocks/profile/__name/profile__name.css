@@ -9,3 +9,13 @@
   font-weight: 500;
   line-height: 48px;
 }
+
+@media screen and (max-width: 930px) {
+  .profile__name {
+    max-width: 189px;
+    text-align: center;
+    font-size: 27px;
+    line-height: 33px;
+    line-height: 1;
+  }
+}
