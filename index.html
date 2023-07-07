@@ -25,36 +25,13 @@
     </section>
     <section class="elements" aria-label="elements-area">
       <ul class="elements__list">
-        <li class="elements__element element">
-          <img src="images/element_moskva.png" alt="фото-москва" class="element__photo">
-          <h2 class="element__title">Москва</h2>
-          <button type="button" class="element__like"></button>
-        </li>
-        <li class="elements__element element">
-          <img src="images/element__kuzneck.png" alt="фото-кузнецк" class="element__photo">
-          <h2 class="element__title">Кузнецк</h2>
-          <button type="button" class="element__like"></button>
-        </li>
-        <li class="elements__element element">
-          <img src="images/element__penza.png" alt="фото-пенза" class="element__photo">
-          <h2 class="element__title">Пенза</h2>
-          <button type="button" class="element__like"></button>
-        </li>
-        <li class="elements__element element">
-          <img src="images/element__innopolis.png" alt="фото-иннополис" class="element__photo">
-          <h2 class="element__title">Иннополис</h2>
-          <button type="button" class="element__like"></button>
-        </li>
-        <li class="elements__element element">
-          <img src="images/element__sochi.png" alt="фото-сочи" class="element__photo">
-          <h2 class="element__title">Сочи</h2>
-          <button type="button" class="element__like"></button>
-        </li>
-        <li class="elements__element element">
-          <img src="images/element__kaliningrad.png" alt="фото-калининград" class="element__photo">
-          <h2 class="element__title">Калининград</h2>
-          <button type="button" class="element__like"></button>
-        </li>
+        <template id="card-template">
+          <li class="elements__element element">
+            <img src="images/element_moskva.png" alt="фото-москва" class="element__photo">
+            <h2 class="element__title">Москва</h2>
+            <button type="button" class="element__like"></button>
+          </li>
+        </template>
       </ul>
     </section>
   </main>

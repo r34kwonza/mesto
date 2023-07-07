@@ -1,3 +1,46 @@
+const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];
+
+const cardsContainer = document.querySelector('.elements__list');
+
+const renderCards = () => {
+  for (let i = 0; i < initialCards.length; i++) {
+    const cardTemplate = document.querySelector('#card-template').content;
+    const cardElement = cardTemplate.querySelector('.elements__element').cloneNode(true);
+
+    cardElement.querySelector('.element__photo').src = initialCards[i].link;
+    cardElement.querySelector('.element__title').textContent = initialCards[i].name;
+
+    cardsContainer.append(cardElement);
+  }
+}
+
+renderCards();
+
 const editButton = document.querySelector('.profile__edit-button');
 const popupForm = document.querySelector('.popup__form');
 const closeButton = document.querySelector('.popup__close-btn');
@@ -10,12 +53,12 @@ const formProfileName = document.querySelector("#nameField");
 const formDescriptionName = document.querySelector("#descriptionField");
 
 
-function changeEditFields() {
+const changeEditFields = () => {
   formProfileName.value = profileName.textContent;
   formDescriptionName.value = profileDescription.textContent;
 }
 
-function popupAction() {
+const popupAction = () => {
   if (popupWindow.classList.contains('popup_opened')) {
     popupWindow.classList.remove('popup_opened');
   }
@@ -25,7 +68,7 @@ function popupAction() {
   }
 }
 
-function handleFormSubmit(evt) {
+const handleFormSubmit = (evt) => {
   evt.preventDefault();
 
   profileName.textContent = nameField.value;
