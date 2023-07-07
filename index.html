@@ -27,8 +27,8 @@
       <ul class="elements__list">
         <template id="card-template">
           <li class="elements__element element">
-            <img src="images/element_moskva.png" alt="фото-москва" class="element__photo">
-            <h2 class="element__title">Москва</h2>
+            <img class="element__photo">
+            <h2 class="element__title"></h2>
             <button type="button" class="element__like"></button>
           </li>
         </template>
@@ -40,14 +40,26 @@
     <p class="footer__copyright">© 2023 Mesto Russia</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup" id="edit-popup">
     <div class="popup__container">
-      <form class="popup__form" name="profile-edit">
+      <form class="popup__form" name="profile-edit" id="profile-edit-form">
         <h2 class="popup__title">Редактировать профиль</h2>
         <input type="text" class="popup__input" name="nameField" id="nameField">
         <input type="text" class="popup__input" name="descriptionField" id="descriptionField">
         <button class="popup__save-btn" type="submit">Сохранить</button>
-        <button class="popup__close-btn" type="button"></button>
+        <button class="popup__close-btn" type="button" id="edit-close"></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup" id="add-popup">
+    <div class="popup__container">
+      <form class="popup__form" name="profile-edit" id="add-card-form">
+        <h2 class="popup__title">Новое место</h2>
+        <input type="text" class="popup__input" name="nameField" id="placeNameField" placeholder="Название">
+        <input type="text" class="popup__input" name="imageField" id="placeDescriptionField" placeholder="Ссылка на картинку">
+        <button class="popup__save-btn" type="submit">Создать</button>
+        <button class="popup__close-btn" type="button" id="add-close"></button>
       </form>
     </div>
   </div>

@@ -28,6 +28,7 @@ const initialCards = [
 const cardsContainer = document.querySelector('.elements__list');
 
 const renderCards = () => {
+
   for (let i = 0; i < initialCards.length; i++) {
     const cardTemplate = document.querySelector('#card-template').content;
     const cardElement = cardTemplate.querySelector('.elements__element').cloneNode(true);
@@ -42,9 +43,15 @@ const renderCards = () => {
 renderCards();
 
 const editButton = document.querySelector('.profile__edit-button');
-const popupForm = document.querySelector('.popup__form');
-const closeButton = document.querySelector('.popup__close-btn');
-const popupWindow = document.querySelector('.popup');
+const popupForm = document.querySelector('#profile-edit-form');
+const editCloseButton = document.querySelector('#edit-close');
+const popupWindow = document.querySelector('#edit-popup');
+
+const addButtutton = document.querySelector('.profile__add-button');
+const addPopupForm = document.querySelector('#add-card-form');
+const addCloseButton = document.querySelector('#add-close');
+const addPopupWindow = document.querySelector('#add-popup');
+
 
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
@@ -52,13 +59,16 @@ const profileDescription = document.querySelector('.profile__description');
 const formProfileName = document.querySelector("#nameField");
 const formDescriptionName = document.querySelector("#descriptionField");
 
+const addFormProfileName = document.querySelector("#placeNameField");
+const addFormDescriptionName = document.querySelector("#placeDescriptionField");
+
 
 const changeEditFields = () => {
   formProfileName.value = profileName.textContent;
   formDescriptionName.value = profileDescription.textContent;
 }
 
-const popupAction = () => {
+const editPopupAction = () => {
   if (popupWindow.classList.contains('popup_opened')) {
     popupWindow.classList.remove('popup_opened');
   }
@@ -68,17 +78,48 @@ const popupAction = () => {
   }
 }
 
+const addPopupAction = () => {
+  if (addPopupWindow.classList.contains('popup_opened')) {
+    addPopupWindow.classList.remove('popup_opened');
+    addFormDescriptionName.value = '';
+    addFormProfileName.value = ''
+
+  }
+  else {
+    changeEditFields();
+    addPopupWindow.classList.add('popup_opened');
+  }
+}
+
 const handleFormSubmit = (evt) => {
   evt.preventDefault();
 
   profileName.textContent = nameField.value;
   profileDescription.textContent = descriptionField.value;
 
-  popupAction();
+  editPopupAction();
 }
 
 popupForm.addEventListener('submit', handleFormSubmit);
-editButton.addEventListener('click', popupAction);
-closeButton.addEventListener('click', popupAction);
+editButton.addEventListener('click', editPopupAction);
+addButtutton.addEventListener('click', addPopupAction);
 
+editCloseButton.addEventListener('click', editPopupAction);
+addCloseButton.addEventListener('click', addPopupAction);
+
+const addCard = (evt) => {
+  evt.preventDefault();
+
+  const cardTemplate = document.querySelector('#card-template').content;
+  const cardElement = cardTemplate.querySelector('.elements__element').cloneNode(true);
+
+  cardElement.querySelector('.element__photo').src = addFormDescriptionName.value;
+  cardElement.querySelector('.element__title').textContent = addFormProfileName.value;
+
+  cardsContainer.append(cardElement);
+
+  addPopupAction();
+}
+
+addPopupForm.addEventListener('submit', addCard);
 
