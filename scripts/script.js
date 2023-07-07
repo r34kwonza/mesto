@@ -123,3 +123,24 @@ const addCard = (evt) => {
 
 addPopupForm.addEventListener('submit', addCard);
 
+
+
+const likeAction = (evt) => {
+  const likeButtons = document.querySelectorAll('.element__like');
+  const likeButton = evt.target;
+
+  if (likeButton.classList.contains('element__like_active')) {
+    likeButton.classList.remove('element__like_active');
+  }
+  else {
+    likeButton.classList.add('element__like_active');
+  }
+
+  likeButtons.forEach((button) => {
+    button.addEventListener('click', likeAction);
+  });
+}
+
+
+
+
