@@ -28,6 +28,7 @@
         <template id="card-template">
           <li class="elements__element element">
             <img class="element__photo">
+            <button class="element__delete"></button>
             <h2 class="element__title"></h2>
             <button type="button" class="element__like"></button>
           </li>
@@ -40,27 +41,35 @@
     <p class="footer__copyright">© 2023 Mesto Russia</p>
   </footer>
 
-  <div class="popup" id="edit-popup">
+  <div class="popup popup_content_edit">
     <div class="popup__container">
       <form class="popup__form" name="profile-edit" id="profile-edit-form">
         <h2 class="popup__title">Редактировать профиль</h2>
-        <input type="text" class="popup__input" name="nameField" id="nameField">
-        <input type="text" class="popup__input" name="descriptionField" id="descriptionField">
+        <input type="text" class="popup__input" name="editNameField" id="editNameField">
+        <input type="text" class="popup__input" name="editDescriptionField" id="editDescriptionField">
         <button class="popup__save-btn" type="submit">Сохранить</button>
         <button class="popup__close-btn" type="button" id="edit-close"></button>
       </form>
     </div>
   </div>
 
-  <div class="popup" id="add-popup">
+  <div class="popup popup_content_add">
     <div class="popup__container">
       <form class="popup__form" name="profile-edit" id="add-card-form">
         <h2 class="popup__title">Новое место</h2>
-        <input type="text" class="popup__input" name="nameField" id="placeNameField" placeholder="Название">
-        <input type="text" class="popup__input" name="imageField" id="placeDescriptionField" placeholder="Ссылка на картинку">
+        <input type="text" class="popup__input" name="addNameField" id="addNameField" placeholder="Название">
+        <input type="text" class="popup__input" name="addImageField" id="addImageField" placeholder="Ссылка на картинку">
         <button class="popup__save-btn" type="submit">Создать</button>
         <button class="popup__close-btn" type="button" id="add-close"></button>
       </form>
+    </div>
+  </div>
+
+  <div class="popup popup_content_image" id="open-image">
+    <div class="popup__container popup__container_image">
+      <button class="popup__close-btn" type="button" id="photo-close"></button>
+      <img alt="#" class="popup__img" src="images/element__sochi.png">
+      <h2 class="popup__name">Сочи</h2>
     </div>
   </div>
 
