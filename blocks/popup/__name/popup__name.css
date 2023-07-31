@@ -5,4 +5,7 @@
     line-height: 15px;
     padding-top: 10px;
     color: #fff;
+    position: absolute;
+    bottom: -22px;
+    left: 0;
   }

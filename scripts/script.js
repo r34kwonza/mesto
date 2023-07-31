@@ -190,6 +190,7 @@ const photoPopupWindow = document.querySelector(".popup_content_image");
 const photoElement = document.querySelector(".element__photo");
 const photoPopup = document.querySelector(".popup__img");
 const photoCloseButton = document.querySelector('#photo-close');
+const photoText = document.querySelector('.popup__name');
 
 // функция открытия попапа с просмотром изображения
 
@@ -203,12 +204,16 @@ const photoPopupAction = () => {
 }
 
 // обработчики событий для попапа просмотра фото
+// может быть стоит убрать условие
 
 photoCloseButton.addEventListener('click', photoPopupAction);
 
 cardsContainer.addEventListener('click', (evt) => {
-  if (evt.target.classList.contains('element__photo')) {
+  if (evt.target.classList.contains('element__photo')) { 
       const photoTarget = evt.target;
+      const thisCard = photoTarget.parentNode;
+
+      photoText.textContent = thisCard.querySelector('.element__title').textContent;
       photoPopup.src = photoTarget.src;
       photoPopupAction();
   }
