@@ -33,10 +33,6 @@ const photoPopup = document.querySelector(".popup__img");
 const photoCloseButton = document.querySelector('#photo-close');
 const photoText = document.querySelector('.popup__name');
 
-// определение переменной для удаления карточки
-
-const deleteButton = document.querySelector(".element__delete");
-
 // функция для отрисовывания карточек
 
 const renderCards = () => {
@@ -74,7 +70,7 @@ const handleFormSubmit = (evt) => {
   closeModalWindow(editPopupWindow);
 }
 
-// функция добавления карточки по заполненным данным
+// функция добавления карточки со всеми обработчиками
 
 const addCard = (imageField, nameField) => {
   const cardTemplate = document.querySelector('#card-template').content;
@@ -90,86 +86,70 @@ const addCard = (imageField, nameField) => {
 
   cardsContainer.prepend(cardElement);
 
+  const likeButton = document.querySelector('.element__like');
+  likeButton.addEventListener('click', () => {
+    likeButton.classList.toggle('element__like_active');
+  });
+
+  const deleteButton = document.querySelector(".element__delete");
+  deleteButton.addEventListener('click', () => {
+    cardElement.remove();
+  });
+
+  const targetImage = document.querySelector('.element__photo');
+  targetImage.addEventListener('click', () => {
+    const thisCard = targetImage.closest('.element');
+
+    const photoTitle = thisCard.querySelector('.element__title').textContent;
+    const photoSrc = targetImage.src;
+
+    photoText.textContent = photoTitle;
+    photoPopup.src = photoSrc;
+    openModalWindow(photoPopupWindow);
+  });
+
   closeModalWindow(addPopupWindow);
 }
 
-// функция для изменения класса кнопки лайк
-
-const likeAction = (evt) => {
-  const likeTarget = evt.target;
-  likeTarget.classList.toggle('element__like_active');
-}
-
-// функция для удаления карточки
-
-const deleteCard = (evt) => {
-  const deleteButtonTarget = evt.target;
-  const cardElement = deleteButtonTarget.parentNode;
-  cardElement.remove();
-}
-
-// обработчик событий для элементов попапа редактирования профиля
+// обработчик события обработки данных из формы редактирования
 
 editPopupForm.addEventListener('submit', handleFormSubmit);
+
+// обработчик открытия попапа редактирования
 
 editButton.addEventListener('click', () => {
   changeEditFields();
   openModalWindow(editPopupWindow);
 });
 
+// обработчик кнопки закрытия попапа редактирования
+
 editCloseButton.addEventListener('click', () => closeModalWindow(editPopupWindow));
 
-// обработчик событий для элементов попапа добавления карточки
+// обработчик кнопки открытия попапа добавления карточки
 
 addButtutton.addEventListener('click', () => {
   openModalWindow(addPopupWindow);
   addPopupForm.reset();
 });
 
+// обработчик кнопки закрытия попапа добавления карточки
+
 addCloseButton.addEventListener('click', () => {
   closeModalWindow(addPopupWindow);
 });
+
+// обработчик события обработки данных из формы добавления карточки
 
 addPopupForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
   addCard(addFormImage, addFormName, cardsContainer);
 });
 
-// обработчик события лайка для всего контейнера с карточками
-
-cardsContainer.addEventListener('click', (evt) => {
-  if (evt.target.classList.contains('element__like')) {
-      likeAction(evt);
-  }
-});
-
-// обработчик события удаления карточки для всего контейнера
-
-cardsContainer.addEventListener('click', (evt) => {
-  if (evt.target.classList.contains('element__delete')) {
-      deleteCard(evt);
-  }
-});
-
-// обработчики событий для попапа просмотра фото
-// может быть стоит убрать условие
+// обработчик кнопки закрытия попапа просмотра изображения
 
 photoCloseButton.addEventListener('click', () => closeModalWindow(photoPopupWindow));
 
-cardsContainer.addEventListener('click', (evt) => {
-  if (evt.target.classList.contains('element__photo')) { 
-    const photoTarget = evt.target;
-    const thisCard = photoTarget.closest('.element');
-
-    const photoTitle = thisCard.querySelector('.element__title').textContent;
-    const photoSrc = photoTarget.src;
-
-    photoText.textContent = photoTitle;
-    photoPopup.src = photoSrc;
-    openModalWindow(photoPopupWindow);
-  }
-});
-
-// отрисовываем первоначальные карточки
+// отрисовка всех карточек
 
 renderCards();
